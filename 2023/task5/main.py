@@ -95,10 +95,6 @@ def apply_map_to_spans(spans, map):
 
             (intersect_l, intersect_u) = (max(l, src_l), min(u, src_u))
             
-            if intersect_u - intersect_l < 1:
-                print("Will never appear")
-                continue
-            
             output_spans.append((intersect_l - src_l + dst_l, intersect_u - src_u + dst_u))
 
             lu = l + (intersect_l - l)
