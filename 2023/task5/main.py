@@ -77,10 +77,8 @@ def apply_map(value, map):
 # basically interval arithmetic
 # note: all "spans" have an inclusive lower bound and exclusive upper bound
 def apply_map_to_spans(spans, map):
-    map = map.copy()
-
     output_spans = []
-    workset = [*spans]
+    workset = spans
     
     for mapping in map:
         tmp = []
